@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<!--tag this webpage as english for accessibility purposes -->
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="static/style.css">
+    <!--"{{ url_for('static', filename='style.css') }}"-->
+    <!--establish metadata, like what charset used-->
+    <meta charset="UTF-8">
+    <!--establish viewport scale to be device width and 100% zoom-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing HTML out</title>
+    <!-- link a css sheet, rel=stylesheet specifies its css, href is the link to the sheet-->
+    <body>
+        <!--
+        we have a "#custom div" tag, which will apply styling
+        rules to an elements within the block tagged as div
+        with id "custom".
+
+        div itself is a general purpose box. it can be used
+        to hold content, be certain color, etc. it can also
+        contain other elements within it and help organize
+        elements.
+        -->
+        <div id="custom">
+            <div style="background-color:coral;">A</div>
+            <div style="background-color:aquamarine;">B</div>
+            <div style="background-color:khaki;">C</div>
+            <div style="background-color:pink;">D</div>
+            <div style="background-color:lightgrey;">E</div>
+            <div style="background-color:lightgreen;">F</div>
+        </div>
+        <form>
+            <label style="color: white;" for="words">Say something</label><br>
+            <input type="text" id="words" name="words">
+        </form>
+        <div id="toolbar">
+            <button class="button">Save Text</button>
+            <button class="button">Load Text</button>
+        </div>
+    </body>
+</head>
+</html>
