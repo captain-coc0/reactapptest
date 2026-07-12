@@ -71,6 +71,7 @@ function App() {
 
   return (
     <main>
+      
       <div id="custom">
         <div style={{backgroundColor: "coral"}}>A</div>
         <div style={{backgroundColor: "aquamarine"}}>B</div>
@@ -80,23 +81,26 @@ function App() {
         <div style={{backgroundColor: "lightgreen"}}>F</div>
       </div>
       <form>
-        <label style={{color: "white"}} htmlFor="words">Say something</label><br />
+        <label id="textinput" htmlFor="words">Say something</label><br />
         <input type="text" id="words" name="words" value={text} onChange={(event) => setText(event.target.value)}></input>
       </form>
-      <button onClick={saveText}>Save Text</button>
-    
-      <select
-        value={selectedTextID}
-        onChange={(event) => setSelectedTextID(event.target.value)}
-      >
-        <option value = "">Select saved text</option>
-        {texts.map((text) => (
-          <option key = {text.id} value = {text.id}>
-            {text.name}
-          </option>
-        ))}
-      </select>
-      <button onClick={loadText}>Load Text</button>
+      <ul>
+        <button className = "button" onClick={saveText}>Save Text</button>
+      
+        <select
+          className = "button"
+          value={selectedTextID}
+          onChange={(event) => setSelectedTextID(event.target.value)}
+        >
+          <option value = "">Load Text</option>
+          {texts.map((text) => (
+            <option key = {text.id} value = {text.id}>
+              {text.name}
+            </option>
+          ))}
+        </select>
+        <button className = "button" onClick={loadText}>Load Text</button>
+      </ul>
     </main>
   )
 }
