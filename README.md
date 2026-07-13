@@ -2,7 +2,7 @@
 to build a react app in your project, run this in root:
 npm create vite@latest frontend -- --template react
 
-then install npm
+then go to /frontend, install npm:
 npm install
 
 run npm:
